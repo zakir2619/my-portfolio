@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createHashRouter } from "react-router-dom";
 import Home from "./pages/Home";
 import FrontEnd from "./layouts/FrontEnd";
 import ContactPage from "./pages/ContactPage";
@@ -7,7 +7,7 @@ import TeamPage from "./pages/TeamPage";
 import PricingPage from "./pages/PricingPage";
 import FaqPage from "./pages/FaqPage";
 
-const router = createBrowserRouter(
+const router = createHashRouter(
   [
     {
       path: "/",
@@ -21,9 +21,6 @@ const router = createBrowserRouter(
         { path: "contact", element: <ContactPage /> },
       ],
     },
-  ],
-  {
-    basename: "/my-portfolio",
-  }
+  ]
 );
 export default router;
