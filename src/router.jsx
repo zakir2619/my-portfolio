@@ -7,20 +7,23 @@ import TeamPage from "./pages/TeamPage";
 import PricingPage from "./pages/PricingPage";
 import FaqPage from "./pages/FaqPage";
 
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <FrontEnd />,
+      children: [
+        { path: "", element: <Home /> },
+        { path: "services", element: <ServicePage /> },
+        { path: "team", element: <TeamPage /> },
+        { path: "pricing", element: <PricingPage /> },
+        { path: "faq", element: <FaqPage /> },
+        { path: "contact", element: <ContactPage /> },
+      ],
+    },
+  ],
   {
-    path: "/",
-    element: <FrontEnd />,
-    children: [
-      { path: "my-portfolio", element: <Home /> },
-      { path: "services", element: <ServicePage /> },
-      { path: "team", element: <TeamPage /> },
-      { path: "pricing", element: <PricingPage /> },
-      { path: "faq", element: <FaqPage /> },
-      { path: "contact", element: <ContactPage /> },
-      { path: "*", element: <h1>404 Page Not Found</h1> },
-    ],
-  },
-]);
-
+    basename: "/my-portfolio",
+  }
+);
 export default router;
