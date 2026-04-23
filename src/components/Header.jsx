@@ -28,7 +28,7 @@ const Header = () => {
 
       {isOpen && (
         <ul className="md:hidden bg-white border-t p-4 space-y-4">
-          <li><NavLink to="#" onClick={() => setIsOpen(false)} className="block text-gray-700">Home</NavLink></li>
+          <li><NavLink to="/" onClick={() => setIsOpen(false)} className="block text-gray-700">Home</NavLink></li>
           <li><NavLink to="/services" onClick={() => setIsOpen(false)} className="block text-gray-700">Services</NavLink></li>
           <li><NavLink to="/team" onClick={() => setIsOpen(false)} className="block text-gray-700">Team</NavLink></li>
           <li><NavLink to="/pricing" onClick={() => setIsOpen(false)} className="block text-gray-700">Pricing</NavLink></li>
