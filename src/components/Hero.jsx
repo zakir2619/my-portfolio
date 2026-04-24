@@ -1,4 +1,4 @@
-
+import profileImg from "../assets/pp.jpg";
 const Hero = () => {
   return (
     <div>
@@ -20,19 +20,13 @@ const Hero = () => {
             </button>
           </div>
         </div>
-        {/* <div className="md:w-1/2 flex justify-center">
-          <div className="w-80 h-80 bg-blue-200 rounded-full flex items-center justify-center shadow-2xl">
-            <span className="text-blue-600 font-bold text-6xl"><img src="/public/pp.jpg" alt="image" className="w-full h-full rounded-full object-cover"/></span>
-          </div>
-        </div> */}
         <div className="md:w-1/2 flex justify-center">
-  <div className="w-80 h-80  rounded-full flex items-center justify-center shadow-2xl overflow-hidden">
+  <div className="w-100 h-100  rounded-full flex items-center justify-center shadow-2xl overflow-hidden">
     <img 
-      src="/pp.jpg" 
-      alt="image" 
-      className="w-full h-full object-cover" 
-      
-    />
+  src={profileImg}
+  alt="image"
+  className="w-full h-full object-cover rounded-ful"
+/>
   </div>
 </div>
       </div>
